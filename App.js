@@ -18,10 +18,11 @@ import { useSelector } from "react-redux";
 
 const Main = () => {
   const dispatch = useDispatch();
-  const userRole = useSelector((state) => state.user.user);
+  //const userRole = useSelector((state) => state.user.user);
+  const  userRole = "student"
   console.log("User", userRole);
 
-  console.log("Role", userRole.role);
+  console.log("Role", userRole);
 
   useEffect(() => {
     loadInitialStateFromStorage(dispatch);
@@ -33,7 +34,7 @@ const Main = () => {
   
   const SelectedNavigator = () => {
     if (loggedIn) {
-      switch (userRole.role) {
+      switch (userRole) {
         case "teacher":
           return <TeacherRouth />;
         case "student":

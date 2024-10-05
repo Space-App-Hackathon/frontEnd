@@ -3,69 +3,50 @@ import {
   Text,
   FlatList,
   TouchableOpacity,
-  Image,
-  ScrollView,
 } from "react-native";
 import React from "react";
-import Header from "../../components/Header";
 import { useState } from "react";
 import { BACKEND_URL } from "../../env";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/userSlice";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Entypo } from "@expo/vector-icons";
-import { AlertDialog, Button, Center, Checkbox, HStack } from "native-base";
 
 const Category = ({ navigation }) => {
   const DATA = [
     {
-      id: "İngilizce",
-      blogName: "İngilizce",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Gezegenler",
     },
     {
-      id: "Hafıza Egzersizleri",
-      blogName: "Hafıza Egzersizleri",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Yıldızlar",
     },
     {
-      id: "Yazılım",
-      blogName: "Yazılım",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Galaksiler",
     },
     {
-      id: "Matematik",
-      blogName: "Matematik",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Uzay Keşifleri",
     },
     {
-      id: "Fizik",
-      blogName: "Fizik",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Kara Delikler",
     },
     {
-      id: "Almanca",
-      blogName: "Almanca",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Roket Bilimi",
     },
     {
-      id: "Hızlı Okuma",
-      blogName: "Hızlı Okuma",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Astronotlar ve Uzay İstasyonları",
     },
     {
-      id: "Genel Kültür",
-      blogName: "Genel Kültür",
-      img: "https://cdnstorage.sendbig.com/unreal/female.webp",
+      id: "Uzay Teknolojisi",
+    },
+    {
+      id: "Uzayda Yaşam",
+    },
+    {
+      id: "Uzay Fiziği ve Kuantum Evreni",
     },
   ];
 
   const [selectedIds, setSelectedIds] = useState([]);
-  const [selectedTime, setSelectedTime] = useState(null);
-
-  const handleSelectTime = (time) => {
-    setSelectedTime(time);
-  };
 
   const handleSelect = (id) => {
     if (!selectedIds) {
@@ -103,34 +84,31 @@ const Category = ({ navigation }) => {
       );
       const data = await response.json();
       console.log(data);
-      if(data.status === "success"){
+      if (data.status === "success") {
         dispatch(updateUser(data.data));
         await AsyncStorage.setItem("user", JSON.stringify(data.data));
-        navigation.navigate("BusinessBottomTab")
+        navigation.navigate("BusinessBottomTab");
       }
-
     } catch (error) {
       console.log(error);
     }
-
-    
   };
 
   const renderItem = ({ item }) => (
     <TouchableOpacity
-      className={` w-40 h-40 relative m-2 justify-center items-center overflow-hidden shadow-sm shadow-griAcik 
+      className={` w-40 h-36 relative m-2 justify-center items-center overflow-hidden shadow-sm shadow-griAcik 
       rounded-md bg-beyaz   `}
       activeOpacity={0.8}
       onPress={() => handleSelect(item.id)}
     >
-      <Text className="text-center font-nunitoExtraBold text-xl text-black px-1">
-        {item.blogName}
+      <Text className="text-center font-nunitoExtraBold text-lg text-black px-1">
+        {item.id}
       </Text>
 
       {selectedIds.includes(item.id) ? (
         <View
           source={{ uri: item.img }}
-          className="w-40 h-40   absolute justify-center items-center bg-purple/60"
+          className="w-40 h-40   absolute justify-center items-center bg-purple/40"
         >
           <Entypo name="check" size={80} color="white" className="" />
         </View>
@@ -145,73 +123,21 @@ const Category = ({ navigation }) => {
   const cancelRef = React.useRef(null);
 
   return (
-    <View className="flex-[0.95] ">
-      <Text className="font-nunitoExtraBold text-2xl text-center mt-2">
+    <View className="flex-[0.87] ">
+      <Text className="font-nunitoExtraBold text-2xl mt-6 px-7">
         Ne Öğrenmek İstersin ?
       </Text>
-      <Center>
-        <AlertDialog
-          leastDestructiveRef={cancelRef}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-          <AlertDialog.Content>
-            <AlertDialog.CloseButton />
-            <AlertDialog.Header>
-              <Text>Ne kadar sıklıkla çalışmak </Text>
-            </AlertDialog.Header>
-            <AlertDialog.Body>
-              <Text className="mb-2">Günde derslerine ne kadar vakit ayırmak istersin?</Text>
-              <View className="flex-row flex-wrap">
-                <TouchableOpacity
-                  className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri  ${selectedTime === 10 ? "bg-purple" : ""} `}
-                  onPress={() => handleSelectTime(10)}
-                >
-                  <Text className={`text-gri font-nunitoBold  ${selectedTime === 10 ? "text-beyaz" : ""}`}>10 dk</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 15 ? "bg-purple" : ""}`}
-                  onPress={() => handleSelectTime(15)}
-                >
-                  <Text className={`text-gri font-nunitoBold  ${selectedTime === 15 ? "text-beyaz" : ""}`}>15 dk</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 25 ? "bg-purple" : ""}`}
-                  onPress={() => handleSelectTime(25)}
-                >
-                  <Text className={`text-gri font-nunitoBold  ${selectedTime === 25 ? "text-beyaz" : ""}`}>20 dk</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 40 ? "bg-purple" : ""}`}
-                  onPress={() => handleSelectTime(40)}
-                >
-                  <Text className={`text-gri font-nunitoBold  ${selectedTime === 40 ? "text-beyaz" : ""}`}>25 dk</Text>
-                </TouchableOpacity>
-              </View>
-            </AlertDialog.Body>
-            <AlertDialog.Footer>
-              <Button.Group space={2}>
-                <Button
-                  variant="unstyled"
-                  colorScheme="coolGray"
-                  onPress={onClose}
-                  ref={cancelRef}
-                >
-                  <Text>Geri</Text>
-                </Button>
-                <Button className="bg-purple" 
-                  onPress={() => {
-                    handleCategory();
-                    onClose();
-                  }}
-                >
-                  <Text className="text-beyaz">Devam Et</Text>
-                </Button>
-              </Button.Group>
-            </AlertDialog.Footer>
-          </AlertDialog.Content>
-        </AlertDialog>
-      </Center>
+      <Text
+        style={{
+          fontSize: 16,
+          color: "gray",
+          marginBottom: 5,
+        }}
+        className="font-mediumNunito px-7"
+      >
+        İlgi alanlarınızdan birkaçını seçin ve herkesin neye tutkulu olduğunuzu
+        bilmesini sağlayın.
+      </Text>
       <View className=" items-center">
         <FlatList
           data={DATA}
@@ -222,12 +148,12 @@ const Category = ({ navigation }) => {
           className="h-[95%] "
         />
         <TouchableOpacity
-          className="justify-center items-center bg-purple h-14 w-full absolute -bottom-10"
+          className="justify-center items-center bg-purple h-14 w-full absolute -bottom-10 rounded-t-3xl"
           // onPress={handleCategory}
           onPress={() => setIsOpen(!isOpen)}
         >
           <Text className="text-beyaz font-nunitoExtraBold text-lg">
-            Haydi Öğrenmeye Başla
+            Haydi Başlayalım
           </Text>
         </TouchableOpacity>
       </View>

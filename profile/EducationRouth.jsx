@@ -23,7 +23,10 @@ import { useSelector } from "react-redux";
 import Test from "../screens/student/Test";
 
 const BusinessRouter = () => {
-  const userCategories = useSelector((state) => state.user.user).categories
+  //const userCategories = useSelector((state) => state.user.user).categories
+  const userCategories = [
+   
+  ]
   const Tab = createBottomTabNavigator();
   const Stack = createStackNavigator();
 
