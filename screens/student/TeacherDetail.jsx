@@ -15,7 +15,7 @@ const TeacherDetail = () => {
   return (
     <View>
       <Goback />
-      <View className="bg-yesil  absolute bottom-14 h-14 w-[100%]">
+      <View className="bg-purple  absolute bottom-14 h-14 w-[100%]">
       <TouchableOpacity className="w-full h-full items-center justify-center ">
         <Text className="text-white font-nunitoExtraBold text-lg">İletişime Geç</Text>
         
@@ -38,7 +38,7 @@ const TeacherDetail = () => {
             <Text className="font-nunitoExtraBold text-sm text-griAcik">
               {item.title}
             </Text>
-            <Text className="font-nunitoExtraBold text-3xl text-yesil">
+            <Text className="font-nunitoExtraBold text-3xl text-purple">
               {item.name}
             </Text>
           </View>
@@ -76,7 +76,7 @@ const TeacherDetail = () => {
           </Text>
         </View>
 
-        <Text className="text-2xl font-nunitoExtraBold ml-2 mt-2 text-yesil ">
+        <Text className="text-2xl font-nunitoExtraBold ml-2 mt-2 text-purple ">
           Dersler
         </Text>
 

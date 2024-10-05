@@ -38,7 +38,7 @@ const Ai = () => {
     <View>
       {item.username === "user" ? (
         <View className="  mr-3 mb-2 flex-row self-end">
-          <View className="bg-yesil shadow shadow-gri max-w-xs rounded-2xl rounded-br-none min-h-[40px] px-2 justify-center">
+          <View className="bg-purple shadow shadow-gri max-w-xs rounded-2xl rounded-br-none min-h-[40px] px-2 justify-center">
             <Text className="text-white text-[13px] p-2 font-nunitoBold">
              {item.message}
             </Text>
@@ -47,7 +47,7 @@ const Ai = () => {
       ) : (
         <View className=" ml-3 mb-2 flex-row">
           <View className="bg-white shadow shadow-gri max-w-xs min-h-[40px] px-2 justify-center rounded-2xl rounded-bl-none">
-            <Text className="p-2 pt-1 pb-0 text-yesil text-end">Ducky</Text>
+            <Text className="p-2 pt-1 pb-0 text-purple text-end">Ducky</Text>
             <Text className="text-gri text-[13px] p-2 pt-0 font-nunitoBold">
               {item.message}
             </Text>
@@ -67,7 +67,7 @@ const Ai = () => {
         <View className="justify-center">
           <Text className="text-2xl font-nunitoBold">
             Merhaba{" "}
-            <Text className="text-2xl font-nunitoBold text-yesil">Erkan</Text>
+            <Text className="text-2xl font-nunitoBold text-purple">Erkan</Text>
           </Text>
 {/*           <Text className=" font-nunitoBold">
             Sana Nasıl Yardımcı Olabilirim ?{" "}

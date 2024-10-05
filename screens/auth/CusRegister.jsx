@@ -129,7 +129,7 @@ const CusRegister = ({ navigation }) => {
             />
           </Stack>
           <TouchableOpacity
-            className="w-[55%] h-14 justify-center items-center rounded-md mb-4 bg-yesil "
+            className="w-[55%] h-14 justify-center items-center rounded-md mb-4 bg-purple "
             activeOpacity={0.7}
             onPress={handleRegister}
           >

@@ -15,7 +15,7 @@ const AuthEntryQuestion = ({ navigation }) => {
         <View className="w-full justify-center items-center">
           <View className="w-[55%]">
             <Text
-              className="text-4xl mb-4 text-yesil font-extrabold"
+              className="text-4xl mb-4 text-purple font-extrabold"
             >
               Kaydol
             </Text>
@@ -28,7 +28,7 @@ const AuthEntryQuestion = ({ navigation }) => {
             <Text
               className="font-semibold text-lg text-gri2 font-nunitoExtraBold  "
             >
-              Öğretmen
+              Blog Yazarı
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -46,15 +46,12 @@ const AuthEntryQuestion = ({ navigation }) => {
         </View>
 
         <TouchableOpacity
-          className="w-[70%] h-16 shadow shadow-yesil2 justify-center items-center rounded-full bg-yesil "
+          className="w-full h-16 justify-center items-center "
           onPress={() => navigation.navigate("Login")}
           activeOpacity={0.7}
         >
-          <Text className="font-semibold text-base px-1 text-center text-beyaz ">
-            Zaten bir hesabın var mı?
-          </Text>
-          <Text className="font-semibold text-base  text-center text-beyaz ">
-            Giriş yap
+          <Text className="font-semibold text-base px-1 text-center text-purple ">
+            <Text className="text-gri font-normal">Zaten bir hesabın var mı?</Text> Giriş yap
           </Text>
         </TouchableOpacity>
       </View>

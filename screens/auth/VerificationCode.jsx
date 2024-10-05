@@ -30,7 +30,7 @@ const VerificationCode = () => {
           </Text>
           <Stack space={2} w="80%" my="4" mb="8" px={8}>
             <Input
-              className=" bg-beyaz  2 text-[18px] text-yesil "
+              className=" bg-beyaz  2 text-[18px] text-purple "
               variant="filled"
               placeholder="X-X-X-X"
               shadow={1}

@@ -130,7 +130,7 @@ const Category = ({ navigation }) => {
       {selectedIds.includes(item.id) ? (
         <View
           source={{ uri: item.img }}
-          className="w-40 h-40   absolute justify-center items-center bg-yesil/60"
+          className="w-40 h-40   absolute justify-center items-center bg-purple/60"
         >
           <Entypo name="check" size={80} color="white" className="" />
         </View>
@@ -164,25 +164,25 @@ const Category = ({ navigation }) => {
               <Text className="mb-2">Günde derslerine ne kadar vakit ayırmak istersin?</Text>
               <View className="flex-row flex-wrap">
                 <TouchableOpacity
-                  className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri  ${selectedTime === 10 ? "bg-yesil" : ""} `}
+                  className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri  ${selectedTime === 10 ? "bg-purple" : ""} `}
                   onPress={() => handleSelectTime(10)}
                 >
                   <Text className={`text-gri font-nunitoBold  ${selectedTime === 10 ? "text-beyaz" : ""}`}>10 dk</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 15 ? "bg-yesil" : ""}`}
+                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 15 ? "bg-purple" : ""}`}
                   onPress={() => handleSelectTime(15)}
                 >
                   <Text className={`text-gri font-nunitoBold  ${selectedTime === 15 ? "text-beyaz" : ""}`}>15 dk</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 25 ? "bg-yesil" : ""}`}
+                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 25 ? "bg-purple" : ""}`}
                   onPress={() => handleSelectTime(25)}
                 >
                   <Text className={`text-gri font-nunitoBold  ${selectedTime === 25 ? "text-beyaz" : ""}`}>20 dk</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 40 ? "bg-yesil" : ""}`}
+                   className={`p-1 w-14 m-1 justify-center items-center rounded-full  bg-beyaz shadow shadow-gri ${selectedTime === 40 ? "bg-purple" : ""}`}
                   onPress={() => handleSelectTime(40)}
                 >
                   <Text className={`text-gri font-nunitoBold  ${selectedTime === 40 ? "text-beyaz" : ""}`}>25 dk</Text>
@@ -199,7 +199,7 @@ const Category = ({ navigation }) => {
                 >
                   <Text>Geri</Text>
                 </Button>
-                <Button className="bg-yesil" 
+                <Button className="bg-purple" 
                   onPress={() => {
                     handleCategory();
                     onClose();
@@ -222,7 +222,7 @@ const Category = ({ navigation }) => {
           className="h-[95%] "
         />
         <TouchableOpacity
-          className="justify-center items-center bg-yesil h-14 w-full absolute -bottom-10"
+          className="justify-center items-center bg-purple h-14 w-full absolute -bottom-10"
           // onPress={handleCategory}
           onPress={() => setIsOpen(!isOpen)}
         >

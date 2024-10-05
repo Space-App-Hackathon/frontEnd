@@ -14,7 +14,7 @@ module.exports = {
       colors:{
         "beyaz":"#FFFFFF",
         "siyah":"#000000",
-        "yesil":"#6CBA0E",
+        "purple":"#6E006C",
         "turunc":"#FF9900",
         "beyazark":"#F1F1F1",
         "beyazbo":"#dddddd",

@@ -82,7 +82,7 @@ const FindTeacher = () => {
           AJ
         </Avatar>
         <View className=" justify-center">
-          <Text className="font-nunitoExtraBold text-2xl text-yesil">
+          <Text className="font-nunitoExtraBold text-2xl text-purple">
             {item.name}
           </Text>
           <Text className="font-nunitoExtraBold text-gri text-sm">
@@ -110,7 +110,7 @@ const FindTeacher = () => {
           InputRightElement={
             <TouchableOpacity className="justify-center items-center">
               <Icon
-                className="w-12 justify-center items-center absolute right-0 bg-yesil h-full pt-[10px] pl-3"
+                className="w-12 justify-center items-center absolute right-0 bg-purple h-full pt-[10px] pl-3"
                 name="search"
                 size={20}
                 color={"black"}

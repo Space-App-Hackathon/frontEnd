@@ -94,7 +94,7 @@ const BusRegister = ({ navigation }) => {
             </View>
           </Stack>
           <TouchableOpacity
-            className="w-[55%] h-14 shadow shadow-yesil2 justify-center items-center rounded-md mb-4 bg-yesil "
+            className="w-[55%] h-14 shadow shadow-yesil2 justify-center items-center rounded-md mb-4 bg-purple "
             activeOpacity={0.7}
             onPress={handleLogin}
           >

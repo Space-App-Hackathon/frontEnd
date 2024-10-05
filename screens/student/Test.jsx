@@ -151,7 +151,7 @@ if(!showCongratulations)
 
     {
         stopInterval  && 
-        <TouchableOpacity onPress={()=>nextQuestion()} className="self-end h-12 bg-yesil items-center justify-center p-2 rounded-2xl mr-5 mt-5 ">
+        <TouchableOpacity onPress={()=>nextQuestion()} className="self-end h-12 bg-purple items-center justify-center p-2 rounded-2xl mr-5 mt-5 ">
             <Text className="text-beyaz font-nunitoBold">Sonraki Soru</Text>
         </TouchableOpacity>
       }

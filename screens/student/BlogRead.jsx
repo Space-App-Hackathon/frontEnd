@@ -42,7 +42,7 @@ const BlogRead = () => {
           </Avatar>
 
           <View>
-            <Text className="ml-2 text-2xl font-nunitoExtraBold text-yesil">
+            <Text className="ml-2 text-2xl font-nunitoExtraBold text-purple">
               {item.name}
             </Text>
             <Text className="ml-2 text-sm font-nunitoExtraBold text-griAcik">

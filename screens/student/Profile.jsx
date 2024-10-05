@@ -94,7 +94,7 @@ const Profile = ({navigation}) => {
               ))}
             </View>
             <View className="w-[90%] ">
-              <TouchableOpacity className="p-2 bg-yesil rounded-2xl items-center justify-center flex-row h-12 gap-x-3 mt-3"
+              <TouchableOpacity className="p-2 bg-purple rounded-2xl items-center justify-center flex-row h-12 gap-x-3 mt-3"
               onPress={()=>navigation.navigate("Category")}>
                 <AntDesign name="plus" size={24} color="white" />
                 <Text className="text-white font-nunitoExtraBold text-base">Ders Ekle</Text>
