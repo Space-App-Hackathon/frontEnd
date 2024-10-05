@@ -110,23 +110,23 @@ const Entry = ({ navigation }) => {
                     Sonsuz yıldızlar arasında kaybol ve kozmosun büyüleyici hikayelerine adım at.
                     </Text>
                     <TouchableOpacity
-                        onPress={() => navigation.navigate("Register")}
+                        onPress={() => navigation.navigate("AuthEntryQuestion")}
                         activeOpacity={0.8}
                         className="w-full self-center mt-12 bg-white h-16 relative rounded-lg items-center justify-center"
                     >
-                        <Text className="text-xl font-boldNunito shadow shadow-black tracking-wider text-primaryColor self-center">
+                        <Text className="text-xl font-boldNunito shadow shadow-black tracking-wider text-purple self-center">
                             Hemen Kayıt Ol
                         </Text>
                     </TouchableOpacity>
                 </View>
                 <TouchableOpacity
                     onPress={() => navigation.navigate("Login")}
-                    activeOpacity={0.5}
+                    activeOpacity={0.8}
                     className="self-center"
                 >
                     <Text className="text-white">
                         Zaten bir hesabın var mı?{" "}
-                        <Text className="text-white font-extraBoldNunito">
+                        <Text className="text-white font-extrabold">
                             Hemen giriş yap
                         </Text>
                     </Text>

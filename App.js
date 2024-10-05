@@ -19,7 +19,7 @@ import { useSelector } from "react-redux";
 const Main = () => {
   const dispatch = useDispatch();
   //const userRole = useSelector((state) => state.user.user);
-  const  userRole = "student"
+  const  userRole = "null"
   console.log("User", userRole);
 
   console.log("Role", userRole);

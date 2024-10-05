@@ -103,19 +103,15 @@ const BusRegister = ({ navigation }) => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View className="w-full items-center">
-          <TouchableOpacity
-            className="w-[80%] h-14 shadow shadow-yesil2 justify-center items-center rounded-md mb-8 bg-beyaz "
-            activeOpacity={0.9}
-            onPress={() => {
-              navigation.navigate("AuthEntryQuestion");
-            }}
-          >
-            <Text className="font-semibold text-lg text-yesil2 ">
-              Kaydın yok mu? Kayıt ol
-            </Text>
-          </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+          className="w-full h-16 justify-center items-center mb-4 "
+          onPress={() => navigation.navigate("Login")}
+          activeOpacity={0.7}
+        >
+          <Text className="font-semibold text-base px-1 text-center text-purple ">
+            <Text className="text-gri font-normal">Bir hesabın yok mu?</Text> Kayıt ol
+          </Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );

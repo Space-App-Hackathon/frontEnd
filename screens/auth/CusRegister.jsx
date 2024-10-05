@@ -53,13 +53,13 @@ const CusRegister = ({ navigation }) => {
   return (
     <View className="flex-1 bg-beyazark ">
       {/* header */}
-      <GoBackHeader title={"Öğretmen Kayıt"} />
+      <GoBackHeader title={"Yazar Kayıt"} />
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
         <View className="flex-1 justify-center items-center ">
-          {/* <View className="w-32 h-32 rounded-full">
+          <View className="w-32 h-32 rounded-full">
             <DowlandImage
               values={{
                 // image: "https://www.w3schools.com/w3images/avatar3.png",
@@ -67,10 +67,11 @@ const CusRegister = ({ navigation }) => {
                   "https://i.kym-cdn.com/entries/icons/facebook/000/023/980/db1.jpg",
               }}
             />
-            <Text className="text-center mt-1 text-base text-yesil2 ark">
+            <Text className="text-center mt-1 text-base text-gray-500 ark">
               Profil Fotoğrafı
             </Text>
-          </View> */}
+          </View>
+
 
           <Stack space={2} w="80%" my="8" mx="auto" px={8}>
             <Input
@@ -92,7 +93,7 @@ const CusRegister = ({ navigation }) => {
               value={email}
               onChangeText={validateEmail}
               borderColor={isValidEmail ? "transparent" : "red.900"}
-              // Hatalı email girişi için stil uygula
+            // Hatalı email girişi için stil uygula
             />
 
             <Input

@@ -26,7 +26,7 @@ const AuthEntryQuestion = ({ navigation }) => {
             onPress={() => navigation.navigate("CusRegister")}
           >
             <Text
-              className="font-semibold text-lg text-gri2 font-nunitoExtraBold  "
+              className=" text-lg text-gri2 font-nunitoSemiBold  "
             >
               Blog Yazarı
             </Text>
@@ -37,8 +37,7 @@ const AuthEntryQuestion = ({ navigation }) => {
             onPress={() => navigation.navigate("BusRegister")}
           >
             <Text
-              className="font-semibold text-lg text-gri2 font-nunitoExtraBold "
-     
+              className=" text-lg text-gri2 font-nunitoSemiBold "
             >
               Öğrenci
             </Text>

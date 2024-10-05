@@ -6,9 +6,11 @@ import { Input, Stack } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 import { studentRegister } from "../../utils/StudentOperations";
 import { ALERT_TYPE, Toast } from "react-native-alert-notification";
+import DowlandImage from "../../components/DowlandImage";
+
 
 const BusRegister = ({ navigation }) => {
-  
+
   const [show, setShow] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,7 +39,7 @@ const BusRegister = ({ navigation }) => {
       });
     }
     else {
-      studentRegister({ name, email, password },navigation);
+      studentRegister({ name, email, password }, navigation);
     }
   };
 
@@ -53,12 +55,25 @@ const BusRegister = ({ navigation }) => {
   return (
     <View className="flex-1 bg-beyazark    ">
       {/* header */}
-      <GoBackHeader title={"Öğrenci Kayıt"} />
+      <GoBackHeader title={"Kullanıcı Kayıt"} />
       <ScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         showsVerticalScrollIndicator={false}
       >
+
         <View className="flex-1  justify-center items-center ">
+          <View className="w-32 h-32 rounded-full">
+            <DowlandImage
+              values={{
+                // image: "https://www.w3schools.com/w3images/avatar3.png",
+                image:
+                  "https://i.kym-cdn.com/entries/icons/facebook/000/023/980/db1.jpg",
+              }}
+            />
+            <Text className="text-center mt-1 text-base text-gray-500 ark">
+              Profil Fotoğrafı
+            </Text>
+          </View>
           <Stack space={2} w="80%" my="8" mx="auto" px={8}>
             <Input
               className=" bg-beyaz  text-[14px] text-gri "
