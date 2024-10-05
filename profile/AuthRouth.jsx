@@ -8,6 +8,7 @@ import {
   VerificationCode,
   Login,
   RenewPassword,
+  Entry,
 } from "../screens/index";
 
 const AuthRouter = () => {
@@ -15,6 +16,7 @@ const AuthRouter = () => {
 
   const AuthNavigator = () => (
     <Stack.Navigator
+    initialRouteName="Entry"
       screenOptions={{
         headerShown: false,
         // geçiş animasyonu
@@ -31,6 +33,7 @@ const AuthRouter = () => {
       <Stack.Screen name="VerificationCode" component={VerificationCode} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="RenewPassword" component={RenewPassword} />
+      <Stack.Screen name="Entry" component={Entry} />
     </Stack.Navigator>
   );
 

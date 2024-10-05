@@ -16,13 +16,11 @@ const GoBackHeader = ({ title }) => {
           size={32}
           color={"#3a3a3a"}
         />
-        <Text className="text-[16px]  ml-2">Geri</Text>
       </TouchableOpacity>
       <View className="h-full flex-1 items-center justify-center flex-row">
         <Text
-          className={`text-[16px]  font-nunitoExtraBold ${
-            title && ("#3a3a3a")
-          }`}
+          className={`text-[16px]  font-medium ${title && ("#3a3a3a")
+            }`}
         >
           {title || ""}
         </Text>

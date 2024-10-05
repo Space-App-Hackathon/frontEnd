@@ -18,6 +18,7 @@ import TeacherBlog from "./teacher/TeacherBlog"
 import TeacherHome from "./teacher/TeacherHome"
 import TeacherMessages from "./teacher/TeacherMessages"
 import TeacherProfile from "./teacher/TeacherProfile"
+import Entry from "./auth/Entry"
 
 
 
@@ -46,6 +47,6 @@ export{
     TeacherBlog,
     TeacherHome,
     TeacherMessages,
-    TeacherProfile
-    
+    TeacherProfile,
+    Entry
 }
