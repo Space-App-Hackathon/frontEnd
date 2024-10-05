@@ -20,11 +20,13 @@ import {
   Category
 } from "../screens/index";
 import { useSelector } from "react-redux";
-import Test from "../screens/student/Test";
 
 const BusinessRouter = () => {
   //const userCategories = useSelector((state) => state.user.user).categories
   const userCategories = [
+    {
+      id:"selam"
+    }
    
   ]
   const Tab = createBottomTabNavigator();
@@ -120,9 +122,8 @@ const BusinessRouter = () => {
         }),
       }}
     >
-    
+
       <Stack.Screen name="Category" component={Category} />
-      <Stack.Screen name="Test" component={Test} />
       <Stack.Screen name="BusinessBottomTab" component={BusinessBottomTab} />
       <Stack.Screen name="TeacherDetail" component={TeacherDetail} />
       <Stack.Screen name="BlogRead" component={BlogRead} />

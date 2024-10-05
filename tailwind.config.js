@@ -3,11 +3,11 @@ module.exports = {
   darkMode: 'class',
   content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}" , "./components/**/*.{js,jsx,ts,tsx}"],
     theme: {
-      "nunito":'./assets/fonts/Nunito-Regular.ttf',
-      "nunitoExtraBold":'./assets/fonts/Nunito-ExtraBold.ttf',
-      "nunitoBold":'./assets/fonts/Nunito-Bold.ttf',
-      "nunitoBlack":'./assets/fonts/Nunito-Black.ttf',
-      "nunitoSemiBold":'./assets/fontsNunito-SemiBold.ttf',
+      "nunito":'/assets/fonts/Nunito-Regular.ttf',
+      "nunitoExtraBold":'/assets/fonts/Nunito-ExtraBold.ttf',
+      "nunitoBold":'/assets/fonts/Nunito-Bold.ttf',
+      "nunitoBlack":'/assets/fonts/Nunito-Black.ttf',
+      "nunitoSemiBold":'/assets/fontsNunito-SemiBold.ttf',
   },
   theme: {
     extend: {
