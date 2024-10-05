@@ -17,7 +17,8 @@ import {
   Profile,
   ABC,
   TeacherDetail,
-  Category
+  Category,
+  Rank
 } from "../screens/index";
 import { useSelector } from "react-redux";
 
@@ -127,6 +128,9 @@ const BusinessRouter = () => {
       <Stack.Screen name="BusinessBottomTab" component={BusinessBottomTab} />
       <Stack.Screen name="TeacherDetail" component={TeacherDetail} />
       <Stack.Screen name="BlogRead" component={BlogRead} />
+      <Stack.Screen name="Rank" component={Rank} />
+
+      
     </Stack.Navigator>
   );
 

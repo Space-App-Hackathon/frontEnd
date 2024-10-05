@@ -19,6 +19,10 @@ import TeacherHome from "./teacher/TeacherHome"
 import TeacherMessages from "./teacher/TeacherMessages"
 import TeacherProfile from "./teacher/TeacherProfile"
 import Entry from "./auth/Entry"
+import Rank from "./student/Rank"
+
+
+
 
 
 
@@ -48,5 +52,6 @@ export{
     TeacherHome,
     TeacherMessages,
     TeacherProfile,
-    Entry
+    Entry,
+    Rank
 }

@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import Header from "../../components/Header";
 import { AntDesign } from "@expo/vector-icons";
-import { Entypo, Feather } from "@expo/vector-icons";
+import { Entypo, FontAwesome } from "@expo/vector-icons";
 import { ScrollView } from "native-base";
 import { useSelector } from "react-redux";
 
@@ -20,6 +20,7 @@ const Profile = ({navigation}) => {
     dispatch(updateUser(false));
   };
   const user = useSelector((state) => state.user.user);
+
   return (
     <View className="flex-1  ">
       <Header />
@@ -34,7 +35,9 @@ const Profile = ({navigation}) => {
             </TouchableOpacity>
             <Image
               className="w-full h-[150] "
-              source={require("../../assets/bgGreen.jpeg")}
+              source={{
+                uri: "https://img.freepik.com/premium-photo/beautiful-ultra-hd-wallpaper-space-nebula-stars-sky-photot_1265429-96.jpg",
+              }}
               style={{ resizeMode: "cover" }}
             />
           </View>
@@ -65,41 +68,39 @@ const Profile = ({navigation}) => {
                 </View>
               </View>
               <View className="flex-1 bg-white flex-row rounded-full shadow shadow-gri ml-2 items-center justify-center ">
-                {/* <View className="h-full justify-center items-center ">
-                <AntDesign name="star" size={30} color="#FF9900" />
-              </View> */}
                 <View className="h-full justify-center   ">
                   <Text className="text-2xl font-nunitoBold text-gri">
-                    Usta
+                    34. sıra
                   </Text>
-                  <Text className="-mt-1 text-griAcik">Mevcut Rütbe</Text>
+                  <Text className="-mt-1 text-griAcik text-center">Sıralaman</Text>
                 </View>
               </View>
             </View>
+
+            <TouchableOpacity onPress={navigation.navigate("Rank")} activeOpacity={.8} className="flex items-center justify-center">
+              <View className="w-[97%] bg-white h-14 shadow shadow-gri rounded-full p-2 mx-6 my-1 flex-row items-center">
+                <View className="w-full flex justify-center items-center flex-row gap-x-2">
+                <FontAwesome name="diamond" size={24} color="#FF9900" />
+                <Text className="text-lg font-nunitoExtraBold text-gri">
+                  Sıralamamı Gör
+                </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
 
             <Text className="text-gri text-2xl font-nunitoExtraBold text-start w-full ml-4">
               Aldığın dersler
             </Text>
             <View className="w-full">
-              {user.categories.map((item, index) => (
                 <View
                   className="bg-white h-14 shadow flex-row items-center shadow-gri rounded-md p-2 mx-2  my-1"
-                  key={index}
                 >
                   <Entypo name="dot-single" size={24} color="#FF9900" />
                   <Text className="text-lg font-nunitoExtraBold text-gri">
-                    {item}
+                    asdasdasd
                   </Text>
                 </View>
-              ))}
             </View>
-            <View className="w-[90%] ">
-              <TouchableOpacity className="p-2 bg-purple rounded-2xl items-center justify-center flex-row h-12 gap-x-3 mt-3"
-              onPress={()=>navigation.navigate("Category")}>
-                <AntDesign name="plus" size={24} color="white" />
-                <Text className="text-white font-nunitoExtraBold text-base">Ders Ekle</Text>
-              </TouchableOpacity>
-            </View> 
           </View>
         </View>
       </ScrollView>
